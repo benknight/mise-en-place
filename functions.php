@@ -205,41 +205,6 @@ function project_admin_head() {
 }
 
 /**
- * Custom settings
- */
-add_action( 'admin_menu', 'miseenplace_custom_settings' );
-function miseenplace_custom_settings() {
-	$custom_settings = array(
-		'Street Address' 	=> 'street_address',
-		'City'				=> 'city',
-		'State'				=> 'state',
-		'Zip Code'			=> 'zip_code',
-		'Phone'				=> 'phone',
-		'Fax'				=> 'fax',
-		'Facebook Page'		=> 'facebook_url',
-		'Twitter Profile'	=> 'twitter_url'
-	);
-	foreach ( $custom_settings as $name => $id ) {
-		register_setting( 'general', $id );
-		add_settings_field( 
-			$id, 
-			$name, 
-			'custom_settings_callback',
-			'general',
-			'default',
-			$id
-		);
-	}
-}
-function custom_settings_callback( $id ) {
-	?><input type="text" 
-		name="<?php echo $id; ?>" 
-		id="<?php echo $id; ?>" 
-		value="<?php echo get_option( $id ); ?>" 
-		class="regular-text" /><?php
-}
-
-/**
  * Display subnav based on wp-generated css hooks
  *
  * TODO: make this a widget

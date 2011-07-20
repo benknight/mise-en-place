@@ -6,7 +6,7 @@
 		<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 		
 		<div id="site-generator">
-		Website by <a href="http://3c32.com">3c32</a> in Portland, Maine.
+			<p>Website by <a href="http://3c32.com">3c32</a> in Portland, Maine.</p>
 		</div>
 		
 	</footer><!-- #colophon -->
