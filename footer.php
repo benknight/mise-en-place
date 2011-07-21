@@ -1,20 +1,18 @@
-		</div><!-- eo .container -->
+
+		<footer id="colophon" role="contentinfo">
+		
+			<div class="container">
+				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
+				
+				<div id="site-generator">
+					<p>Website made by <a href="http://3c32.com">3c32</a> in Portland, Maine.</p>
+				</div>
+			</div>
+			
+		</footer><!-- #colophon -->
+
 	</div><!-- eo #main -->
 </div><!-- eo #page -->
-
-<footer id="colophon" role="contentinfo">
-
-	<div class="container">
-		<?php dynamic_sidebar( 'sidebar-footer' ); ?>
-		
-		<div id="site-generator">
-			<p>Website made by <a href="http://3c32.com">3c32</a> in Portland, Maine.</p>
-		</div>
-	</div>
-	
-</footer><!-- #colophon -->
-
-</div><!-- eo #wrap -->
 
 <!-- JavaScript at the bottom for fast page loading -->
 
