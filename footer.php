@@ -1,16 +1,20 @@
+		</div><!-- eo .container -->
+	</div><!-- eo #main -->
+</div><!-- eo #page -->
 
-	</div><!-- #main -->
-	
-	<footer id="colophon" role="contentinfo">
+<footer id="colophon" role="contentinfo">
 
+	<div class="container">
 		<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 		
 		<div id="site-generator">
 			<p>Website made by <a href="http://3c32.com">3c32</a> in Portland, Maine.</p>
 		</div>
-		
-	</footer><!-- #colophon -->
-</div><!-- #container -->
+	</div>
+	
+</footer><!-- #colophon -->
+
+</div><!-- eo #wrap -->
 
 <!-- JavaScript at the bottom for fast page loading -->
 

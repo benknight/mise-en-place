@@ -17,6 +17,8 @@ function custom_theme_setup() {
 
 	// plugins
 	require 'plugins/breadcrumb-trail/breadcrumb-trail.php';
+	require 'plugins/section-subnav.php';
+	require 'plugins/posts-widget.php';
 
 	// editor css
 	add_editor_style();
@@ -31,6 +33,7 @@ function custom_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// disable certain actions & filters
+	remove_filter( 'wp_page_menu_args', 'twentyeleven_page_menu_args' );
 	remove_action( 'widgets_init', 'twentyeleven_widgets_init' );
 	remove_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
 	remove_action( 'wp_head', 'wp_generator' );
@@ -42,6 +45,39 @@ function custom_theme_setup() {
 	add_filter( 'previous_post_rel_link', 'disable_stuff' );
 	add_filter( 'next_post_rel_link', 'disable_stuff' );
 	add_filter( 'post_comments_feed_link_html', 'disable_stuff' );
+}
+
+/**
+ * wp_page_menu() args
+ */
+function custom_page_menu_args( $args ) {
+	$args['show_home'] = false;
+	$args['exclude'] = '4';
+	return $args;
+}
+add_filter( 'wp_page_menu_args', 'custom_page_menu_args' );
+
+/**
+ * Default Dashboard settings
+ */
+add_action( 'user_register', 'custom_dashboard_widgets' );
+function custom_dashboard_widgets( $user_id ) {
+	update_user_meta( $user_id, 'metaboxhidden_dashboard', array(
+		'dashboard_recent_comments',
+		'dashboard_plugins',
+		'dashboard_recent_drafts',
+		'dashboard_primary',
+		'dashboard_secondary',
+		'dashboard_incoming_links',
+		'dashboard_quick_press'
+	));
+	add_option( 'custom_dashboard', 1 );
+	// TODO: add page speed widget
+}
+if ( is_admin() && ! get_option( 'custom_dashboard' ) ) {
+	global $current_user;
+	get_currentuserinfo();
+	custom_dashboard_widgets( $current_user->ID );
 }
 
 /*
@@ -85,7 +121,7 @@ function custom_scripts_and_styles() {
 		// selectivizr
 	    wp_register_script(
 	    	'selectivizr', 
-	    	get_stylesheet_directory_uri() . '/js/mylibs/selectivizr-1.0.2/selectivizr-min.js',
+	    	get_stylesheet_directory_uri() . '/js/mylibs/selectivizr-min.js',
 	    	array(),
 	    	'1.0.2',
 	    	false
@@ -130,6 +166,15 @@ function custom_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Default Sidebar',
 		'id' => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	));
+
+	register_sidebar( array(
+		'name' => 'Homepage Sidebar',
+		'id' => 'sidebar-home',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
@@ -202,44 +247,4 @@ function project_admin_head() {
 			opacity: 0.55;
 		}
 	</style><?php
-}
-
-/**
- * Display subnav based on wp-generated css hooks
- *
- * TODO: make this a widget
- *
- */
-function custom_subnav() {
-
-	// check for a preselected menu item
-	global $subnav_selected_item;
-	$selected_class = $subnav_selected_item ? "menu-item-$subnav_selected_item" : false;
-	
-	$nav_menus = get_registered_nav_menus();
-				
-	foreach ( array_keys( $nav_menus ) as $nav_menu ) {
-	
-		$nav = wp_nav_menu( array( 'theme_location' => $nav_menu, 'echo' => false ) );
-		
-		$xml = simplexml_load_string( $nav );
-		
-		if ( ! empty( $xml->ul ) ) : foreach ( $xml->ul[0]->li as $menu_item ) :
-		
-			$menu_item_class = (string) $menu_item['class'];
-			if ( ( strstr( $menu_item_class, 'current-menu-ancestor' )
-				|| strstr( $menu_item_class, 'current-menu-item' )
-				|| strstr( $menu_item_class, 'current-menu-parent' ) 
-				|| strstr( $menu_item_class, $selected_class ) )
-				&& ! empty( $menu_item->ul ) 
-				&& strstr( (string) $menu_item->ul[0]['class'], 'sub-menu' ) ) {
-					echo '<nav id="miseenplace-subnav">';
-					echo '<h1>' . $menu_item->a->asXML() . '</h1>';
-					echo $menu_item->ul->asXML();
-					echo '</nav>';
-					return;
-			}
-		
-		endforeach; endif;
-	}
 }
