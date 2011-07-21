@@ -52,7 +52,6 @@ function custom_theme_setup() {
  */
 function custom_page_menu_args( $args ) {
 	$args['show_home'] = false;
-	$args['exclude'] = '4';
 	return $args;
 }
 add_filter( 'wp_page_menu_args', 'custom_page_menu_args' );

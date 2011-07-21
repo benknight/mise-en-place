@@ -35,8 +35,10 @@
 
 <!-- scripts -->
 <?php wp_print_scripts( 'modernizr' ); ?>
+<!--[if lt IE 9]>
 <?php wp_print_scripts( 'respondjs' ); ?>
-<!--[if lt IE 9]><?php wp_print_scripts( 'selectivizr' ); ?><![endif]-->
+<?php wp_print_scripts( 'selectivizr' ); ?>
+<![endif]-->
 <?php wp_head(); ?>
 
 <?php if ( defined( 'TYPEKIT_ID' ) ) : ?>
