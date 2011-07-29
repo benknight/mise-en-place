@@ -219,6 +219,15 @@ table { border-collapse: collapse; border-spacing: 0; }
    Author: 3c32.com
    ========================================================================== */
 
+body {
+	font: 13px/1.385 sans-serif;
+}
+body, select, input, textarea {
+	color: #444;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* header */
 #site-title a {
 	background: url(img/logo.png);
 	width: 200px;
@@ -227,6 +236,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 #site-description {
 	margin-top: .5em;
 }
+
+/* footer */
 #site-generator p {
 	margin: 0;
 }
