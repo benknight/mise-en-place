@@ -1,7 +1,7 @@
 /*
-Theme Name:     Mise En Place
-Author:         Benjamin Knight
-Author URI:     http://benknight.me
+Theme Name:     3c32 Project
+Author:         3c32
+Author URI:     http://3c32.com
 Description:	WordPress child theme that borrows nifty, semantic HTML5 templates from the default Twentyeleven theme.
 Template:       twentyeleven
 */
@@ -457,6 +457,16 @@ body {
 body, select, input, textarea {
 	color: #444;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* header */
+#site-title a {
+	background: url(img/logo.png);
+	width: 200px;
+	height: 44px;
+}
+#site-description {
+	margin-top: .5em;
 }
 
 /* footer */

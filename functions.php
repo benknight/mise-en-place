@@ -224,3 +224,24 @@ function add_archive_to_search( $classes ) {
 	}
 	return $classes;
 }
+
+/**
+ * Brand the admin
+ */
+add_action( 'login_head', 'project_admin_head' );
+add_action( 'admin_head', 'project_admin_head' );
+function project_admin_head() {
+	?><style type="text/css">
+		/* overwrite login logo */
+		.login h1 a {
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png);
+			height: 45px;
+			opacity: 0.8;
+		}
+		#header-logo {
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/icon-32x32.gif);
+			background-size: 16px 16px;
+			opacity: 0.55;
+		}
+	</style><?php
+}
