@@ -1,0 +1,3 @@
+[submodule "plugins/section-subnav"]
+	path = plugins/section-subnav
+	url = git@github.com:benknight/section-subnav.git
