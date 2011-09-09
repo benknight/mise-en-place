@@ -15,9 +15,6 @@ function disable_stuff() { return false; }
 add_action( 'after_setup_theme', 'miseenplace_theme_setup' );
 function miseenplace_theme_setup() {
 
-	// plugins
-	require 'plugins/section-subnav/section-subnav.php';
-
 	// editor css
 	add_editor_style();
 	
