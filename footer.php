@@ -5,7 +5,7 @@
 				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 				
 				<div id="site-generator">
-					<p>Website made by <a href="http://benknight.me">Benjamin Knight</a> in Portland, Maine.</p>
+					<p>Website made by <a href="http://3c32.com">3c32</a> in Portland, Maine.</p>
 				</div>
 			</div>
 			
