@@ -115,7 +115,7 @@ function miseenplace_scripts_and_styles() {
 		// selectivizr
 	    wp_register_script(
 	    	'selectivizr', 
-	    	get_stylesheet_directory_uri() . '/js/mylibs/selectivizr-min.js',
+	    	get_stylesheet_directory_uri() . '/js/libs/selectivizr-min.js',
 	    	array( 'jquery' ),
 	    	'1.0.2',
 	    	false
@@ -124,7 +124,7 @@ function miseenplace_scripts_and_styles() {
 		// galleria jquery plugin
 		wp_register_script(
 			'galleria', 
-			get_stylesheet_directory_uri() . '/js/mylibs/galleria/galleria-1.2.4.min.js',
+			get_stylesheet_directory_uri() . '/js/libs/galleria/galleria-1.2.4.min.js',
 			array( 'jquery' ),
 			'1.2.4',
 			false
