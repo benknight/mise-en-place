@@ -41,12 +41,6 @@
 <?php wp_print_scripts( 'selectivizr' ); ?>
 <![endif]-->
 
-<?php if ( defined( 'TYPEKIT_ID' ) ) : ?>
-<!-- typekit -->
-<script src="http://use.typekit.com/<?php echo TYPEKIT_ID; ?>.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-<?php endif; ?>
-
 </head>
 
 <body <?php body_class(); ?>>
