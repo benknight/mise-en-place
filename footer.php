@@ -18,7 +18,7 @@
 
 <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
 <?php wp_print_scripts( 'jquery' ); ?>
-<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
 
 <?php wp_footer(); ?>
 
