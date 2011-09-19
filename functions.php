@@ -88,7 +88,7 @@ function miseenplace_scripts_and_styles() {
 		wp_deregister_script( 'jquery' );
 	    wp_register_script(
 	    	'jquery', 
-	    	'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js',
+	    	'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js',
 	    	array(),
 	    	'1.6.2',
 	    	true
@@ -103,20 +103,11 @@ function miseenplace_scripts_and_styles() {
 	    	false
 	    );
 	    
-	    // respondjs
-	    wp_register_script(
-	    	'respondjs', 
-	    	get_stylesheet_directory_uri() . '/js/libs/respond.min.js',
-	    	array(),
-	    	false,
-	    	false
-	    );
-
 		// selectivizr
 	    wp_register_script(
 	    	'selectivizr', 
 	    	get_stylesheet_directory_uri() . '/js/libs/selectivizr-min.js',
-	    	array( 'jquery' ),
+	    	array(),
 	    	'1.0.2',
 	    	false
 	    );
