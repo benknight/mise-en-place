@@ -37,7 +37,7 @@
 <!-- scripts -->
 <?php wp_print_scripts( 'modernizr' ); ?>
 <!--[if lt IE 9]>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.6.4"></script>
 <?php wp_print_scripts( 'selectivizr' ); ?>
 <![endif]-->
 

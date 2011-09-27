@@ -90,7 +90,7 @@ function miseenplace_scripts_and_styles() {
 	    	'jquery', 
 	    	'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js',
 	    	array(),
-	    	'1.6.2',
+	    	'1.6.4',
 	    	true
 	    );
 		
