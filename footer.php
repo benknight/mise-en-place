@@ -5,7 +5,7 @@
 				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 				
 				<div id="site-generator">
-					<p>Website made by <a href="http://3c32.com">3c32</a> in Portland, Maine.</p>
+					<p>Website made by <a href="http://benknight.me">Benjamin Knight</a> in Portland, Maine.</p>
 				</div>
 			</div>
 			
@@ -18,7 +18,7 @@
 
 <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
 <?php wp_print_scripts( 'jquery' ); ?>
-<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
 
 <?php wp_footer(); ?>
 

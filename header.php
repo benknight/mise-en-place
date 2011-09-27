@@ -33,19 +33,13 @@
 <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+<?php wp_head(); ?>
 <!-- scripts -->
 <?php wp_print_scripts( 'modernizr' ); ?>
 <!--[if lt IE 9]>
-<?php wp_print_scripts( 'respondjs' ); ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <?php wp_print_scripts( 'selectivizr' ); ?>
 <![endif]-->
-<?php wp_head(); ?>
-
-<?php if ( defined( 'TYPEKIT_ID' ) ) : ?>
-<!-- typekit -->
-<script src="http://use.typekit.com/<?php echo TYPEKIT_ID; ?>.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-<?php endif; ?>
 
 </head>
 
@@ -54,7 +48,7 @@
 	<header id="branding" role="banner">
 			<hgroup>
 				<h1 id="site-title">
-					<a class="ir" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 						<?php bloginfo( 'name' ); ?>
 					</a>	
 				</h1>

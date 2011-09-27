@@ -15,9 +15,6 @@ function disable_stuff() { return false; }
 add_action( 'after_setup_theme', 'miseenplace_theme_setup' );
 function miseenplace_theme_setup() {
 
-	// plugins
-	require 'plugins/section-subnav/section-subnav.php';
-
 	// editor css
 	add_editor_style();
 	
@@ -91,7 +88,7 @@ function miseenplace_scripts_and_styles() {
 		wp_deregister_script( 'jquery' );
 	    wp_register_script(
 	    	'jquery', 
-	    	'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js',
+	    	'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js',
 	    	array(),
 	    	'1.6.2',
 	    	true
@@ -106,20 +103,11 @@ function miseenplace_scripts_and_styles() {
 	    	false
 	    );
 	    
-	    // respondjs
-	    wp_register_script(
-	    	'respondjs', 
-	    	get_stylesheet_directory_uri() . '/js/libs/respond.min.js',
-	    	array(),
-	    	false,
-	    	false
-	    );
-
 		// selectivizr
 	    wp_register_script(
 	    	'selectivizr', 
-	    	get_stylesheet_directory_uri() . '/js/mylibs/selectivizr-min.js',
-	    	array( 'jquery' ),
+	    	get_stylesheet_directory_uri() . '/js/libs/selectivizr-min.js',
+	    	array(),
 	    	'1.0.2',
 	    	false
 	    );
@@ -127,7 +115,7 @@ function miseenplace_scripts_and_styles() {
 		// galleria jquery plugin
 		wp_register_script(
 			'galleria', 
-			get_stylesheet_directory_uri() . '/js/mylibs/galleria/galleria-1.2.4.min.js',
+			get_stylesheet_directory_uri() . '/js/libs/galleria/galleria-1.2.4.min.js',
 			array( 'jquery' ),
 			'1.2.4',
 			false
