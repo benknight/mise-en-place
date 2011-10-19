@@ -31,6 +31,7 @@ function miseenplace_theme_setup() {
 	remove_filter( 'wp_page_menu_args', 'twentyeleven_page_menu_args' );
 	remove_action( 'widgets_init', 'twentyeleven_widgets_init' );
 	remove_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
+	remove_filter( 'excerpt_more', 'twentyeleven_auto_excerpt_more' );
 	remove_action( 'wp_head', 'wp_generator' );
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
 	remove_filter( 'body_class', 'twentyeleven_body_classes' );
@@ -198,9 +199,9 @@ function miseenplace_excerpt_length( $length ) {
 
 add_filter( 'excerpt_more', 'miseenplace_excerpt_more' );
 function miseenplace_excerpt_more( $more ) {
-	global $post;
-	return '&hellip;';
+	return '&hellip; <a href="'. esc_url( get_permalink() ) . '">Read more <span class="meta-nav">&rarr;</span></a>';
 }
+
 
 /**
  * Add 'archive' class to search results body
