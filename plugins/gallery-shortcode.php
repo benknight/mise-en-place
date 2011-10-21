@@ -4,12 +4,12 @@
  * Custom [gallery] shortcode
  */
 remove_shortcode( 'gallery' );
-add_shortcode( 'gallery', 'galleria_shortcode' );
-function galleria_shortcode( $atts ) {
+add_shortcode( 'gallery', 'miseenplace_gallery' );
+function miseenplace_gallery( $atts ) {
 
 	extract( shortcode_atts( array(
 		'image_size' => 'large',
-		'items_wrap' => '<article class="galleria-item"><h1>%1$s</h1>%2$s<p>%3$s</p></article>'
+		'items_wrap' => '<article class="gallery-item"><h1>%1$s</h1>%2$s<p>%3$s</p></article>'
 	), $atts ) );
 	
 	global $post;
@@ -26,7 +26,7 @@ function galleria_shortcode( $atts ) {
 	if ( empty( $attachments ) )
 		return '';
 
-	$output = '<div id="galleria">';
+	$output = '<div class="gallery-items">';
 	
 	foreach ( $attachments as $id => $attachment ) {
 		
@@ -42,6 +42,6 @@ function galleria_shortcode( $atts ) {
 		);	
 	}
 	
-	$output .= '</div><!-- #galleria -->';
+	$output .= '</div><!-- .gallery-items -->';
 	return $output;
 }
