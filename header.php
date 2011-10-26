@@ -28,11 +28,14 @@
 		echo ' | ' . sprintf( 'Page %s', max( $paged, $page ) );
 
 	?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+<!--[if gt IE 6]><!-->
 <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/style.css" />
 <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<!--<![endif]-->
 
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
 <?php wp_head(); ?>
 <!-- scripts -->
 <?php wp_print_scripts( 'modernizr' ); ?>
