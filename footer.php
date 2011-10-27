@@ -1,17 +1,18 @@
 
-		<footer id="colophon" role="contentinfo">
-		
-			<div class="container">
-				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
-				
-				<div id="site-generator">
-					<p>Website made by <a href="http://benknight.me">Benjamin Knight</a> in Portland, Maine.</p>
-				</div>
-			</div>
-			
-		</footer><!-- #colophon -->
-
 	</div><!-- eo #main -->
+
+	<footer id="colophon" role="contentinfo">
+	
+		<div class="container">
+			<?php dynamic_sidebar( 'sidebar-footer' ); ?>
+			
+			<div id="site-generator">
+				<p>Website made by <a href="http://benknight.me">Benjamin Knight</a> in Portland, Maine.</p>
+			</div>
+		</div>
+		
+	</footer><!-- #colophon -->
+
 </div><!-- eo #page -->
 
 <!-- JavaScript at the bottom for fast page loading -->
@@ -21,15 +22,9 @@
 <script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
 
 <?php wp_footer(); ?>
-
 <?php wp_print_scripts( 'theme-plugins' ); ?>
 <?php wp_print_scripts( 'theme-script' ); ?>
 <!-- end scripts-->
-
-<!--[if lt IE 7 ]>
-<script src="js/libs/dd_belatedpng.js"></script>
-<script>DD_belatedPNG.fix("img, .png_bg, .galleria-info"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-<![endif]-->
 
 <!-- google analytics -->
 <script>

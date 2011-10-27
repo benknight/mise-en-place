@@ -46,7 +46,7 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( strtolower( get_current_theme() ) ); ?>>
 <div id="page" class="hfeed container">
 	<header id="branding" role="banner">
 			<hgroup>

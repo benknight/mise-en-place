@@ -123,7 +123,7 @@ function miseenplace_scripts_and_styles() {
 		);
 		
 		// jquery plugins
-		wp_enqueue_script(
+		wp_register_script(
 			'theme-plugins', 
 			get_stylesheet_directory_uri() . '/js/plugins.js',
 			array( 'jquery' ),
@@ -132,7 +132,7 @@ function miseenplace_scripts_and_styles() {
 		);
 		
 		// script
-		wp_enqueue_script(
+		wp_register_script(
 			'theme-script',
 			get_stylesheet_directory_uri() . '/js/script.js',
 			array( 'jquery', 'theme-plugins' ),
