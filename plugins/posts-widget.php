@@ -1,8 +1,13 @@
 <?php
 /*
-Plugin Name: Posts Widget
-Description: Adds a widget that can display posts from a single category.  Modified version of James Lae's "Category Posts Widget".
-Author: Benjamin Knight
+Plugin Name: Category Posts Widget
+Plugin URI: http://jameslao.com/2011/03/24/category-posts-widget-3-2/
+Description: Adds a widget that can display posts from a single category.  Modified by Benjamin Knight.
+Author: James Lao	
+Version: 3.3
+Author URI: http://jameslao.com/
+
+Plugin modified by Benjamin Knight (http://benknight.me) on April 10, 2012.
 */
 
 // Register thumbnail sizes.
