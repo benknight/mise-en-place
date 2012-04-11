@@ -87,32 +87,32 @@ function miseenplace_scripts_and_styles() {
 	
 		// jquery
 		wp_deregister_script( 'jquery' );
-	    wp_register_script(
-	    	'jquery', 
-	    	'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js',
-	    	array(),
-	    	'1.6.4',
-	    	true
-	    );
+		wp_register_script(
+			'jquery', 
+			'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js',
+			array(),
+			'1.6.4',
+			true
+		);
 		
 		// modernizr
-	    wp_register_script(
-	    	'modernizr', 
-	    	'http://www.modernizr.com/downloads/modernizr-2.0.6.js',
-	    	array(),
-	    	'2.0.6',
-	    	false
-	    );
-	    
+		wp_register_script(
+			'modernizr', 
+			'http://www.modernizr.com/downloads/modernizr-2.0.6.js',
+			array(),
+			'2.0.6',
+			false
+		);
+		
 		// selectivizr
-	    wp_register_script(
-	    	'selectivizr', 
-	    	get_stylesheet_directory_uri() . '/js/libs/selectivizr-min.js',
-	    	array(),
-	    	'1.0.2',
-	    	false
-	    );
-	    	    		
+		wp_register_script(
+			'selectivizr', 
+			get_stylesheet_directory_uri() . '/js/libs/selectivizr-min.js',
+			array(),
+			'1.0.2',
+			false
+		);
+						
 		// galleria jquery plugin
 		wp_register_script(
 			'galleria', 
