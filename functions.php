@@ -75,7 +75,7 @@ if ( is_admin() && ! get_option( 'miseenplace_dashboard' ) ) {
 	miseenplace_dashboard_widgets( $current_user->ID );
 }
 
-/*
+/**
  * Scripts & Styles
  * ( scripts loaded in footer for faster page loading )
  *
@@ -144,7 +144,6 @@ function miseenplace_scripts_and_styles() {
 
 /**
  * Register our sidebars and widgetized areas. Also register the default Epherma widget.
- *
  */
 add_action( 'widgets_init', 'miseenplace_widgets_init' );
 function miseenplace_widgets_init() {
@@ -201,7 +200,6 @@ add_filter( 'excerpt_more', 'miseenplace_excerpt_more' );
 function miseenplace_excerpt_more( $more ) {
 	return '&hellip; <a href="'. esc_url( get_permalink() ) . '">Read more <span class="meta-nav">&rarr;</span></a>';
 }
-
 
 /**
  * Add 'archive' class to search results body

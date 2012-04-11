@@ -4,9 +4,9 @@
 <!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
@@ -30,17 +30,17 @@
 	?></title>
 
 <!--[if gt IE 6]><!-->
-<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/style.css" />
-<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/style.css">
+<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 <!--<![endif]-->
 
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
 <!-- scripts -->
 <?php wp_print_scripts( 'modernizr' ); ?>
-<!--[if lt IE 9]>
-<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <?php wp_print_scripts( 'selectivizr' ); ?>
 <![endif]-->
 
@@ -61,15 +61,15 @@
 			<?php get_search_form(); ?>
 
 			<nav id="access" role="navigation">
-				<h3 class="assistive-text">Main menu</h3>
+				<h3 class="visuallyhidden">Main menu</h3>
 				<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
 				<div class="skip-link">
-					<a class="assistive-text" href="#content" title="Skip to primary content">
+					<a class="visuallyhidden" href="#content" title="Skip to primary content">
 						Skip to primary content
 					</a>
 				</div>
 				<div class="skip-link">
-					<a class="assistive-text" href="#secondary" title="Skip to secondary content">
+					<a class="visuallyhidden" href="#secondary" title="Skip to secondary content">
 						Skip to secondary content
 					</a>
 				</div>
