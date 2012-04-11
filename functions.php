@@ -143,7 +143,7 @@ function miseenplace_scripts_and_styles() {
 }
 
 /**
- * Register our sidebars and widgetized areas. Also register the default Epherma widget.
+ * Register our sidebars and widgetized areas.
  */
 add_action( 'widgets_init', 'miseenplace_widgets_init' );
 function miseenplace_widgets_init() {
