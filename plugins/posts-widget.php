@@ -2,7 +2,7 @@
 /*
 Plugin Name: Posts Widget
 Description: Adds a widget that can display posts from a single category.  Modified version of James Lae's "Category Posts Widget".
-Author: 3c32
+Author: Benjamin Knight
 */
 
 // Register thumbnail sizes.
