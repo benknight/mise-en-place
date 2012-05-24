@@ -1,17 +1,14 @@
 
 	</div><!-- #main -->
 
-	<footer id="colophon" role="contentinfo">
+	<footer class="footer" role="contentinfo">
 	
 		<div class="container">
 			<?php dynamic_sidebar( 'sidebar-footer' ); ?>
-			
-			<div id="site-generator">
-				<p>Website made by <a href="http://benknight.me">Benjamin Knight</a> in Portland, Maine.</p>
-			</div>
+			<p>Website made by <a href="http://benknight.me">Benjamin Knight</a> in Portland, Maine.</p>
 		</div>
 		
-	</footer><!-- #colophon -->
+	</footer>
 
 </div><!-- #page -->
 
@@ -19,6 +16,7 @@
 <script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
 
 <?php wp_footer(); ?>
+
 <?php wp_print_scripts( 'theme-plugins' ); ?>
 <?php wp_print_scripts( 'theme-script' ); ?>
 <!-- end scripts-->

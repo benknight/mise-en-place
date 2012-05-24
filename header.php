@@ -48,19 +48,19 @@
 
 <body <?php body_class( strtolower( get_current_theme() ) ); ?>>
 <div id="page" class="hfeed container">
-	<header id="branding" role="banner">
+	<header class="branding" role="banner">
 			<hgroup>
-				<h1 id="site-title">
+				<h1>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 						<?php bloginfo( 'name' ); ?>
 					</a>	
 				</h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</hgroup>
 
 			<?php get_search_form(); ?>
 
-			<nav id="access" role="navigation">
+			<nav role="navigation">
 				<h3 class="visuallyhidden">Main menu</h3>
 				<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
 				<div class="skip-link">
@@ -77,4 +77,4 @@
 			</nav><!-- #access -->
 	</header><!-- #branding -->
 
-	<div id="main">
+	<div class="main" role="main">

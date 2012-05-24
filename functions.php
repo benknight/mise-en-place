@@ -145,7 +145,7 @@ function miseenplace_scripts_and_styles() {
 }
 
 /**
- * Register our sidebars and widgetized areas.
+ * Register our default sidebars and widgetized areas.
  */
 add_action( 'widgets_init', 'miseenplace_widgets_init' );
 function miseenplace_widgets_init() {
@@ -201,15 +201,4 @@ function miseenplace_excerpt_length( $length ) {
 add_filter( 'excerpt_more', 'miseenplace_excerpt_more' );
 function miseenplace_excerpt_more( $more ) {
 	return '&hellip; <a href="'. esc_url( get_permalink() ) . '">Read more <span class="meta-nav">&rarr;</span></a>';
-}
-
-/**
- * Add 'archive' class to search results body
- */
-add_filter( 'body_class', 'add_archive_to_search');
-function add_archive_to_search( $classes ) {
-	if ( is_search() ) {
-		$classes[] = 'archive';
-	}
-	return $classes;
 }
